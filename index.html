@@ -4,7 +4,7 @@
         <title>노을빛의 홈페이지</title>
         <meta charset="utf-8" />
         <!-- charset(캐릭터셋)은 속성값임 -->
-        <!-- utf-8, euc-kr (한글 전용) -->
+        <!-- utf-8 으로 쓰면 한글 깨질 우려 있음. euc-kr 는 (한글 전용) -->
         <meta name="keywords" contents="웹퍼블리싱, 계원, html, css" />
     </head>
     <body> <!-- 본문 -->
@@ -25,20 +25,147 @@
         <태그 속성="값">내용</태그>
         <태그 속성="값" />
 
+        <hr />
         <h1>대한민국</h1>
             <h2>서울특별시</h2>
                 <h3>영등포구</h3>
+        <hr />
             <h2>경기도</h2>
                 <h3>안양시</h3>
                 <h3>의왕시</h3>
+        <hr />
         <h1>미국</h1>
         <h1>일본</h1>
 
-        <p>p는 단락을 정의한다. 주제가 바뀔 때마다 쓴다. 문장이 몇 개 이어지다가 행이 바뀌는 그 부분 </p>
+        <hr />
 
-        html 에서는 띄어쓰기 <br /> 줄 바꿈(엔터) 다 무시함.
-        <!-- <br /> 로 강제 줄 바꿈 해야 됨. -->
-        <!-- <br /> 로 강제 줄 바꿈 해야 됨. -->
+        <h1>집 가고 싶다</h1>
+        <img src="image/2.jpg">
+        <img width="auto" height="359px"src="image/다운로드2.png"> <hr />
+
+        <h1>과제 하기 싫다</h1>
+        <img src="image/다운로드3.png">
+        <img width="auto" height="359px"src="image/다운로드4.png">
+
+        <hr />
+        <p>p는 단락을 정의한다. 주제가 바뀔 때마다 쓴다.  <br /> 문장이 몇 개 이어지다가 행이 바뀌는 그 부분 </p>
+
+        html 에서는 띄어쓰기 <br /> 줄 바꿈(엔터) 다 무시함.  <br /> <br />
+        <!-- <br /> 로 강제 줄 바꿈 해야 됨 -->
+        <!-- <br /> 로 강제 줄 바꿈 해야 됨 -->
+        <!--  <hr /> 은 (단락마다) 줄 긋는 거 -->
+
+        <strong>강한 강조</strong>  <br />
+        <em>강조</em>
+        <!-- 의미를 부여 (권장) -->
+        <!-- 중요하다는 것을 의미함 (강조) -->
+
+        <b>굵은 글씨</b>  <br />
+        <i>기울임꼴(이텔릭체)</i>
+        <!-- 모양을 부여 (비권장) -->
+        <!-- '강조' 를 하는 것이 아니라 폰트에 대한 것 -->
+
+        <ins>추가글</ins>  <br />
+        <del>삭제글</del>
+
+        <u>밑줄</u>  <br />
+        <strike>중간줄</strike>
+        <!-- Strike 는 비권장 --> <br /> <br />
+
+        윗첨자<sup>윗쪽에 붙여서 부연설명함.</sup>
+        아랫첨자<sub>아랫쪽에 붙여서 부연설명함.</sub> <br /> <br />
+
+        <ul>
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+        </ul>
+        <!-- 절차적이지 않은 (순서에 관계 없는) 리스트를 작성할 때 사용함 -->
+        <ol>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+        </ol>
+        <!-- 절차적인 (순서에 관계 있는) 리스트를 작성할 때 사용함 -->
+
+        <dl>
+            <dt>용어</dt>
+            <dd>용어 설명</dd>
+            <dt>HTML</dt>
+            <dd>Hyper Text Markup Language</dd>
+        </dl>
+        <!-- 용어의 정의 부분과, 용어에 대한 설명부분으로 나뉘어져 있음 -->
+        <!-- 단순히 정의형 목록만이 아니라 주종관계가 성립되는 콘텐츠에 광범위하게 사용됨 (dt : 주, dd : 종) -->
+
+        <style>
+            th,td{
+                border: solid 1px black;
+            }
+        </style> <!-- CSS -->
+        <!-- 테이블 만들기 = 도표 만들기 -->
+        <table summary="table기본">
+                <caption>table기본형태</caption> <br />
+            <thead>
+                <tr> <!-- 한 줄 row 행 (다 같은 말) -->
+                    <th scope="col" rowspan="2">제목1</th> <!-- 제목 한 칸 colum 열 --> <!-- 한 줄씩 늘릴 수록 칸이 계속 더 늘어남 -->
+                    <th scope="col" colspan="2">제목2</th>
+                    <th scope="col">제목3</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>내용1</td> <!-- 내용 한 칸 -->
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+            <tbody>
+                <!-- 표 본문 -->
+            </tbody>
+            <tfoot>
+                <!-- 표 끝 -->
+            </tfoot>
+        </table> <br />
+
+        <div>블록형(block) 구획 나눔</div>
+        <span>인라인형 구획 나눔</span> <br />
+        <!-- 의미없이 사용하기 좋은 태그 --> <!-- div 와 span 모두 구획 나눔이라는 역할을 동일함 -->
+
+        <form>
+            <label for="number">주민등록번호</label>
+            <input name="number" type="text" placeholder="-기호 없이 숫자만 입력해주세요." />
+            <input type="text" value="123456" />
+            <input type="password" />
+
+            <input type="radio" value="1" name="p1" checked />사과
+            <input type="radio" value="2" name="p1" />배
+            <input type="radio" value="3" name="p1" />딸기
+
+            <input type="checkbox" value="1" checked /> 빨강
+            <input type="checkbox" value="2" checked /> 파랑
+            <input type="checkbox" value="3" checked /> 노랑 <br /> <br />
+
+            <!-- radio 는 선택지? 같은 거임 -->
+            <!-- 같은 선택지 안에서는 같은 이름을 써야 함 -> name="p1" -->
+            <!-- check 는 ="???" 같은 값을 주지 않아도 괜찮음 -->
+
+            <select>
+                <option>네이버</option>
+                <option>구글</option>
+                <option>계원</option>
+            <select> <br />
+            <textarea rows="5" cols="60"> 여러 줄의 장문을 작성 </textarea>
+
+            <input onclick="alert('버튼눌림');" type="button" value="버튼입니다" />
+            <button>
+                <strong>
+                    <ins>버튼입니다</ins>
+                </strong>
+            </button>
+            <input type="submit" value="제출" />
+            
+            <!-- button 은 기본적으로 새로고침 기능이 있음 -->
+
+        </form>
+       
 
     </body>
 </html> <!-- 종료태그 -->
