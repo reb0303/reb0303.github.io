@@ -52,7 +52,6 @@
 
         html 에서는 띄어쓰기 <br /> 줄 바꿈(엔터) 다 무시함.  <br /> <br />
         <!-- <br /> 로 강제 줄 바꿈 해야 됨 -->
-        <!-- <br /> 로 강제 줄 바꿈 해야 됨 -->
         <!--  <hr /> 은 (단락마다) 줄 긋는 거 -->
 
         <strong>강한 강조</strong>  <br />
@@ -76,9 +75,9 @@
         아랫첨자<sub>아랫쪽에 붙여서 부연설명함.</sub> <br /> <br />
 
         <ul>
-                <li>리스트1</li>
-                <li>리스트2</li>
-                <li>리스트3</li>
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
         </ul>
         <!-- 절차적이지 않은 (순서에 관계 없는) 리스트를 작성할 때 사용함 -->
         <ol>
@@ -151,22 +150,24 @@
                 <option>네이버</option>
                 <option>구글</option>
                 <option>계원</option>
-            <select> <br />
+            <select>
+            <br />
             <textarea rows="5" cols="60"> 여러 줄의 장문을 작성 </textarea>
-
+            <input onclick="window.open('https://www.mozilla.org/', '_self');" type="button" value="link" />
             <input onclick="alert('버튼눌림');" type="button" value="버튼입니다" />
+            <!-- input~ 는 form 에서 쓰게 만들어진 것이어서 기능을 명시를 해야 함 -->
             <button>
                 <strong>
                     <ins>버튼입니다</ins>
                 </strong>
             </button>
             <input type="submit" value="제출" />
-            
+
             <!-- button 은 기본적으로 새로고침 기능이 있음 -->
+            <!-- button 은 form 에서만 쓰게 만들어진 것은 아니라서 위처럼 "제출" 만 써도 됨 -->
 
         </form>
        
-
     </body>
 </html> <!-- 종료태그 -->
 
