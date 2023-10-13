@@ -167,7 +167,103 @@
             <!-- button 은 form 에서만 쓰게 만들어진 것은 아니라서 위처럼 "제출" 만 써도 됨 -->
 
         </form>
-       
+
+        <div></div>
+        <section>
+            <h1>구획 제목</h1>
+            구획 내용
+        </section>
+        <!-- section 은 일반적으로 콘텐츠를 장이나 절 등으로 구분하고자 할 경우 사용함 -->
+        <!-- div의 대치요소가 아니므로, 이거 썼다가 저거 썼다가 하면은 안 됨 -->
+        <!-- 열이나 행을 구분하기 위해 사용해서는 안 됨 -->
+
+        <nav> <!-- 내비게이션 -->
+            <ul>
+            <1i><a href="링크주소1">버튼1</a></li>
+            <1i><a href="링크주소2">버튼2</a></li>
+            </ul>
+            <a href="링크주소1">버튼1</a>
+            <a href="링크주소2">버튼2</a>
+        </nav>
+        <!-- nav 는 주요한 내비게이션 역할을 하는 메인 요소에만 사용하는 것이 좋음 -->
+        <!-- ex) 네이버의 상단 검색창과 로그인 부분, 네이버 부가 서비스 내비게이션 아이콘 부분 -->
+
+        <article> <!-- 문서 주제와 다소 벗어난 이야기 -->
+            <h1>기사 제목</h1>
+            기사 내용
+        </article>
+        <!-- 문서가 계속 같은 카테고리의 내용이라면 section 을 계속 써도 되지만,
+            카테고리의 내용이 바뀐다면 (연관은 있는 내용) article 을 써야 함 -->
+
+        <aside>
+            <h1>광고 제목</h1>
+            광고 내용
+        </aside>
+         <!-- aticle 은 주제들이 어느 정도 연관이 있지만, aside 는 주제가 아예 다름 (그래서 광고로 넣으면 좋음) -->
+
+        <header></header> <!-- 본문(body)의 '서론' -->
+        <footer></footer> <!-- 본문(body)의 '결론' -->
+        <!-- *주의* head 는 머리, header 는 페이지나 섹션의 헤더(서론) 으로 둘이 다른 거임 -->
+        <!-- 페이지 헤더는 제목, 로고, 검색 등을 포함함 -->
+        <!-- 페이지 푸터는 사이트 연락처 정보 및 저작권을 포함함 -->
+
+        <canvas id="myCanvas"></canvas>
+
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            // get element by id -> 라고 적혀있어서 대소문자가 섞여서 써있는 거임
+            // id 기준으로 요소 가져오기
+            var ctx = canvas.getContext("2d");
+            // get context 내용 가져오기
+
+            ctx.fillStyle = "#FF0000"; // 색을 지정
+            ctx.fillRect(25, 25, 100, 100); // 채움 사각형
+            ctx.clearRect(45, 45, 60, 60); // 사각형태로 지우기
+            ctx.strokeRect(50, 50, 50, 50); // 윤곽 사각형
+
+            ctx.fillStyle = "#000000";
+            ctx.beginPath(); // 선 그리기 시작
+            ctx.moveTo(65, 75); // 펜 들어 움직이기
+            ctx.lineTo(90, 95); // 선 그으며 움직이기
+            ctx.lineTo(90, 55);
+            ctx.fill(); // 내부 채우기
+
+            ctx.beginPath();
+            ctx.arc(225, 75, 50, 0, Math.PI * 2, true); // Outer circle 
+            ctx.moveTo(260, 75);
+            ctx.arc(225, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+            ctx.moveTo(215, 65);
+            ctx.arc(210, 65, 5, 0, Math.PI * 2, true);  // Left eye
+            ctx.moveTo(245, 65);
+            ctx.arc(240, 65, 5, 0, Math.PI * 2, true);  // Right eye
+            ctx.stroke();
+            // 스마일 그리는 법
+        </script> </p> <br />
+        <!-- 자바 스크립트 라서 그렇게 중요한 내용은 아님 -->
+
+        <!-- <audio controls autoplay --> <!-- autoplay : 자동재생 -->
+        <!-- Google Chrome에서 정책이 변경 되어 muted 되어 있지 않은 동영상은 자동재생 되지 않음 -->
+        <audio controls>
+            <!-- <source src="horse.ogg" type="audio/ogg"> -->
+            <source src="mp3/file_example_MP3_700KB.mp3" type="audio/mpeg" /> <!-- 차선책 첫 번째  -->
+            <!-- Your browser does not support the audio element. --> <!-- 차선책 두 번째  -->
+        </audio>
+        <!-- 독립형 태그가 아니기 때문에 뒤에 /(슬래쉬) 붙여줘야 함 -->
+        <!-- 첫 번째가 안 되면 차선책 1, 차선책 1이 안 되면 차선책 2 -->
+        <!-- 차선책 2는 오디오 파일을 지원을 안 한다는 말임 -->
+
+        <video controls>
+            <source src="mp4/file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
+            <!-- 독립형 태그가 아니기 때문에 뒤에 /(슬래쉬) 붙여줘야 함 -->
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+            <!-- Your browser does not support the video tag. -->
+          </video>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oR63-g0jJmY?si=CNyqPny8gvhyRKd0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- 유튜브 > 공유 > 퍼가기 > 복사 하면 유튜브 영상이 첨부 됨 -->
+        <!-- 용량 제한이 없어서 편리함 -->
+        <!-- 채널주가 영상을 막아놓으면 첨부가 되어도 재생은 안 될 수가 있음 -->
+
     </body>
 </html> <!-- 종료태그 -->
 
