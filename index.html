@@ -6,9 +6,18 @@
         <!-- charset(캐릭터셋)은 속성값임 -->
         <!-- utf-8 으로 쓰면 한글 깨질 우려 있음. euc-kr 는 (한글 전용) -->
         <meta name="keywords" contents="웹퍼블리싱, 계원, html, css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <!-- Index.html 과 style.css 가 같은 폴더에 있으니 파일명만 호출해도 됨 -->
+        <!-- 그렇지 않은 경우에는 교안처럼 진행 -->
+        <!-- 위 경우에는 아래 부분의 style 부분을 style.css 파일로 따로 만들어야 함 -->
+        <style>
+            body{
+                color: skyblue;
+            }
+        </style>
     </head>
     <body> <!-- 본문 -->
-        <a href="sub.html">서브페이지</a>
+        <a style="color: plum;"> </a> <a href="sub.html">서브페이지</a> <!-- 이 방법은 비추천 -->
         <a href="https://www.google.com">구글 바로가기</a>
         <a href="https://cafe.naver.com/kwdmd">카페 바로가기</a>
         <a href="https://www.naver.com/" target="_blank">네이버 바로가기</a>
@@ -25,7 +34,7 @@
         <태그 속성="값">내용</태그>
         <태그 속성="값" />
 
-        <hr />
+        <hr /> <!-- <hr /> 같이 / 가 뒤에 오는 형태는 독립형 태그로, 시작 태그와 종료 태그가 합쳐진 형태라서 혼자서 쓰여도 된다 -->
         <h1>대한민국</h1>
             <h2>서울특별시</h2>
                 <h3>영등포구</h3>
@@ -56,8 +65,7 @@
 
         <strong>강한 강조</strong>  <br />
         <em>강조</em>
-        <!-- 의미를 부여 (권장) -->
-        <!-- 중요하다는 것을 의미함 (강조) -->
+        <!-- strong 이 em 보다 더 강한 강조임 -->
 
         <b>굵은 글씨</b>  <br />
         <i>기울임꼴(이텔릭체)</i>
@@ -122,6 +130,17 @@
             <tfoot>
                 <!-- 표 끝 -->
             </tfoot>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">제목2</th>
+                </tr>
+            </thead>
+                <tr>
+                    <td>내용2</td>
+                    <td>내용3</td>
+                </tr>
         </table> <br />
 
         <div>블록형(block) 구획 나눔</div>

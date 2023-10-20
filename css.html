@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css</title>
+        <meta charset="utf-8" />
+        <style>
+            body{color: red;}
+            /* body 의 컬러가 레드라는 뜻 */
+            #div1{color: blue;}
+            #div2{color: #2d8dc8;}
+            /* 컬러코드 6자리와 3자리로 컬러 지정 가능 */
+            #div3{color: rgb(196, 178, 37);}
+            /* rgb 수치값으로 컬러 지정 가능 */
+            
+            /* css의 주석 */
+        </style>
+
+        <!-- 명시도에 따른 우선 순위 예시 ↡ -->
+        <style type="text/css">
+	        .cascade {color:green;}
+	        #specifi {color:blue;}
+        </style>
+
+        <div class="cascade"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+        <div class="cascade" id="specifi" style="color:red;"> 단계적으로 적용되는 스타일 </div>
+        
+        <!-- 명시도란 브라우저가 어느 요소와 가장 연관된 속성을 찾는 수단 -->
+        <!-- 명시도 점수가 높은 스타일을 우선으로 적용 -->
+        <!-- 명시도 점수가 같으면 가장 마지막에 스타일을 우선적으로 적용 -->
+        <!-- css의 주석 -->
+    </head>
+    <body>
+        <div id="div1">상속과 겹침</div>
+
+        <style>
+            div{
+                background-color: lightblue;
+                border: solid 1px red;
+            }
+            #w1{
+                width: 200px;
+                height: 150px;
+                background-color: lightblue;
+            }
+        </style>
+
+        <div>default</div>
+        <!-- width 을 지정을 안 하면 웹페이지 크기에 맞추려고 해서 박스의 크기가 고정이 되지 않고 크기가 웹페이지 크기에 따라 변화함 -->
+        <div id="w1">width</div>
+        <!-- width 을 지정을 하면 그 만큼의 px 크기만큼만 박스가 지정이 됨 -->
+
+        <style>
+            #p1{
+                padding: 20px;
+            }
+        </style>
+        <div id="p1">padding</div>
+        <!-- padding 은 내부 영역이라는 뜻 -->
+
+        <style>
+            #m1{
+                margin: 20px;
+            }
+        </style>
+        <div id="m1">margin</div>
+        <!-- !! margin 을 연달아 쓰면 마진이 겹쳐서 적용이 안 된 것처럼 보일 수 있음 !! -->
+
+        <style>
+            *{ text-decoration: underline; /* css selector 선택자 */}
+            /* 모든 html 태그에 밑줄을 긋는다 */
+
+            strong { /* element selector 요소 선택자 */
+                color: green;
+            }
+            /* strong 의 글씨 색은 green 이다 */
+
+            em {
+                color: pink;
+            }
+        </style>
+        <strong>strong</strong>
+        <em>em</em>
+        <!-- 모든 strong 과 em 태그들에 각각의 글씨 색을 적용한다 -->
+
+        <style>
+            .c1{
+                color: violet;
+            }
+            #d1{
+                color: yellowgreen;
+            }
+        </style>
+        <div class="c1">class selector</div>
+        <div id="d1">id selector</div>
+        <!-- element selector 처럼 모두 적용하는 것이 아니라, 일부에만 적용시키려고 할 때 씀 -->
+        <!-- .(마침표) 꼭 적어야 함!! -->
+
+        <style>
+            #f1::first-line{
+                color: blue;
+            }
+            #f1::first-letter{
+                font-size: 40px;
+            }
+            #f1::before{ content: "시작"; }
+            #f1::after{ content: "끝"; }
+            /* 값이 바뀌는 것이 아니라, 원래 텍스트에서 앞과 뒤에 (꾸밈 글자로써) 추가로 들어가는 거임 */
+
+            /* : 을 1개 적든 2개 적든 결과는 같지만, 프로그램에서 구분을 위해 :: 라고 2개를 붙이는 것 */
+        </style>
+        <div id="f1">
+            first line, first letter first line, first letter first line, first letter first line, first letter first line, first letter
+            first line, first letter first line, first letter first line, first letter first line, first letter first line, first letter
+            first line, first letter first line, first letter first line, first letter first line, first letter first line, first letter
+            first line, first letter first line, first letter first line, first letter first line, first letter first line, first letter
+        </div>
+    </body>
+<html>
