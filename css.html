@@ -115,5 +115,301 @@
             first line, first letter first line, first letter first line, first letter first line, first letter first line, first letter
             first line, first letter first line, first letter first line, first letter first line, first letter first line, first letter
         </div>
+
+        <style>
+            #d2 div:first-child{
+                color:aquamarine;
+            }
+            #d2 div:nth-child(2){
+                color: blueviolet;
+            }
+            #d2 div:last-child{
+                color: rgb(160, 0, 70);
+            }
+        </style>
+        <div id="d2">
+            <div>(first child) child1</div>
+            <div>(middle child) child2</div>
+            <div>(last child) child3</div>
+        </div>
+        <style>
+            /* :link, :visited, :hover, :active, :focus */
+            a:link{ color: brown; } /* 링크가 있을때 */
+            a:visited{ color: rgb(72, 173, 173); } /* 방문한 후 */
+            a:hover{ color: blue; } /* 마우스를 올리면 */
+            a:active{ color:darkgoldenrod; } /* 클릭하면 */
+            a:focus{ color: blueviolet; } /* 포커스 되면 */
+            a{ text-decoration; }
+        </style>
+        <a href="http://www.naver.com">네이버</a>
+
+
+        <style>
+            #d3>span{ /* 자식 요소 선택자 */
+                font-size: 30px;
+            }
+            #d3 span{ /* 하위 요소 선택자 */
+                text-decoration: line-through;
+            }
+            #d3>div>span{
+                background-color: blue;
+            }
+        </style>
+        <div id="d3">
+            <span>span1</span>
+            <div>
+                <span>span2</span>
+            </div>
+        </div>
+        <style>
+            /* width, height, border, margin, padding */
+            #d4{
+                width: 200px;
+                height:200px;
+                border: solid 4px black;
+                border-left:solid 2px rgb(160, 0, 70);
+                border-right: solid 3px pink;
+                border-top: solid 3px blue;
+                border-bottom: solid 6px blueviolet;
+
+                margin: 100px; /* 이동할때 쓰는건 비추 */
+                margin: 50px 100px; /* 상하 좌우 */
+                margin: 50px 100px 150px 200px; /* 상 우 하 좌(위부터 시계방향) */
+                
+                margin-left: 50px;
+                margin-right: 100px;
+                margin-top: 150px;
+                margin-bottom: 200px;
+
+                padding: 100px; /* 이동할 때 쓰는건 비추 */
+                padding: 50px 100px; /* 상하 좌우 */
+                padding: 50px 100px 150px 200px; /* 상 우 하 좌 (위부터 시계 방향) */
+                
+                padding-left: 50px;
+                padding-right: 100px;
+                padding-top: 150px;
+                padding-bottom: 200px;
+            } 
+        </style>
+        <div id="d4">div4</div>
+
+        <style>
+            #d5{
+                position: absolute; /* 절대적인(사용시 고정적인 값이므로 웹사이트의 유동적이 변화에 어렵다) */
+                left: 130px;
+                top: 130px;
+            }
+            #d6{
+                position: relative;
+                /* relative 부모는 absolute 자식의 기준이 된다. */
+            }
+        </style>
+        <div id="d6"> <!-- 권장 사용 -->
+            <div id="d5">absolute</div>
+        </div>
+
+        <style>
+            #d7{    
+                position: fixed; 
+                top: 0px;
+                right: 0px;
+            }
+        </style>
+        <div id="d7">fixed</div>
+
+        <style>
+            #d8{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        </style>
+        <div id="d8">font family</div>
+
+        <style>
+            #d9{
+                text-align: center;
+            }
+        </style>
+        <div id="d9">text align center</div>
+
+        <style>
+            #d10{
+                letter-spacing: 50px;
+                line-height: 40px;
+            }
+        </style>
+        <div id="d10">
+            letter spacing letter spacing letter spacing letter spacing letter spacing letter spacing 
+            letter spacing letter spacing letter spacing letter spacing letter spacing letter spacing 
+            letter spacing letter spacing letter spacing letter spacing letter spacing letter spacing 
+            letter spacing letter spacing letter spacing letter spacing letter spacing letter spacing 
+        </div>
+
+        <style>
+            #d11{
+                white-space: pre; /* 있는 그eo로 (간격까지) */
+            }
+        </style>
+        <div id="d11">
+            a  b  c  d  
+            e  f  
+        </div>
+
+        <style>
+            ul{
+                list-style-type: decimal;
+            }
+            ol{
+                list-style-type: lower-alpha;
+            }
+        </style>
+
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ul>
+        <ol>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ol>
+
+        <style>
+            /*
+                baseline : 기준선에 정렬
+                top : 위쪽정렬
+                text-top : 위쪽정렬
+                middle : 중앙정렬
+                bottom : 하단정렬
+                text-bottom : 하단정렬
+            */
+            #table_target td{
+                width:150px;
+                height:150px;
+                border:solid 1px black;
+            }
+            #vartical_baseline{ vertical-align: baseline; }
+            #vartical_top{ vertical-align: top; }
+            #vartical_text_top{ vertical-align: text-top; }
+            #vartical_middle{ vertical-align: middle; }
+            #vertical_bottom{ vertical-align: bottom; }
+            #vertical_text_bottom{ vertical-align: text-bottom; }
+        </style>
+        <table id="table_target">
+            <tr>
+                <td id="vartical_baseline">top</td>
+                <td id="vartical_top">top</td>
+                <td id="vartical_text_top">text_top</td>
+                <td id="vartical_middle">middle</td>
+                <td id="vertical_bottom">bottom</td>
+                <td id="vertical_text_bottom">text_bottom</td>
+            </tr>
+        </table>
+        <style>
+            #d12{
+                min-width: 200px;
+                max-width: 800px;
+                border-radius: 10px;
+                text-shadow: 2px 2px 1px rgba(54, 35, 35, 0.243);
+            }
+        </style>
+        <div id="d12">width</div>
+
+        <style>
+            #d13{
+                background-color: red; /* 배경색 인터랙션 */
+                border-radius: 0px;
+                text-shadow: 0px 0px 0px black;
+                transition: background-color 1s, /* 색이 변하는 시간 -> 더 자연스럽게 */
+                border-radius 1s, text-shadow 1s; /* 사이에 ,를 넣으면 2개를 넣을 수 있음 */
+            }
+            #d13:hover{
+                background-color: blue; /* 배경색 인터랙션 */
+                border-radius: 20px;
+                text-shadow: 2px 2px 2px;
+            }
+        </style>
+        <div id="d13">width</div>
+
+        <style>
+            #d14{
+                animation-name: d14_animation; /* 애니메이션 이름 명명 */
+                animation-duration: 2s; /* 애니메이션 재생 길이(듀레이션) */
+            }
+            @keyframes d14_animation{
+                from{background-color: white;} /* 배경이 흰색에서 */
+                to{background-color: green;} /* 배경이 초록색으로 바뀜 */
+            }
+        </style>
+        <div id="d14">animation</div>
+        <!-- 단순한 색 바꿈 애니메이션을 넣을 때 -->
+
+        <style>
+            #d15{
+                animation-name: d15_animation; /* 애니메이션 이름 명명 */
+                animation-duration: 2s; /* 애니메이션 재생 길이(듀레이션) */
+            }
+            @keyframes d15_animation{
+                0%{background-color: white;} /* 배경이 흰색에서 */
+                50%{background-color: red;} /* 배경이 빨간색으로 바뀌었다가 */
+                100%{background-color: green;} /* 배경이 초록색으로 바뀜 */
+            }
+        </style>
+        <div id="d15">animation</div>
+        <!-- 복잡한 애니메이션을 넣을 때 -->
+
+        <style>
+            .col1{ /* id일 때는 #으로, coll은 .로 호출 */
+                columns: 100px 3; /* 100px은 최소 넓이, 최대 단의 수(넓이는 100px을 넘어야 하고, 단은 3단을 넘으면 안 됨) */
+                /* minimum 100px, maximum 3 cols */
+                /* 한 단이 최소 100px을 충족 가능해야만 단 수가 증가함 (200px 2단, 300px 3단) */
+                /* 최대 3단이 만들어지만 가로 길이에 상관 없이 단 수를 유지함 */
+            }
+        </style>
+        <div class="col1">
+            1절 - 동해물과 백두산이 마르고 닳도록
+            하느님이 보우하사 우리나라만세
+            무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+            
+            2절 - 남산위에 저 소나무 철갑을 두른듯
+            바람서리 불변함은 우리기상 일세
+            무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+            
+            3절 - 가을하늘 공활한데 높고 구름없이 
+            밝은달은 우리가슴 일편단심일세
+            무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+            
+            4절 - 이 기상과 이 맘으로 충성을 다하여
+            괴로우나 즐거우나 나라사랑하세
+            무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+            </div>
+
+            <style>
+                #d16{
+                    display: flex; /* 표시방식: 유연하게 라고 적혀있는 것 */
+                    
+                }
+                #d16>div:nth-child(1){flex: 2;}
+                #d16>div:nth-child(2){flex: 5;}
+                #d16>div:nth-child(3){flex: 8;}
+                /* flex 값을 1 1 1 넣으면 1대1대1 비율로 레이아웃리 나눠짐 */
+            </style>
+            <div id="d16">
+                <div>child1</div>
+                <div>child2</div>
+                <div>child3</div>
+            </div>
+
+            <style>
+                #d17{
+                    display: flex;
+                    justify-content: space-around;
+                }
+            </style>
+            <div id="d17">
+                <div>child1</div>
+                <div>child2</div>
+                <div>child3</div>
+            </div>
     </body>
 <html>

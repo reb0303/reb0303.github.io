@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>layout</title>
+    <meta charset="utf-8" />
+    <style>
+        #wrap ul{} /* ul을 여러 개를 썼다면 잘못 호출될 수 있음 */
+        #wrap>header>ul>li{} /* 세세하게 부르는 법 ex) 디미디 *학년 *** */
+        #wrap{
+            min-width: 1000px; /* 웹 페이지의 최소값이 1000이다 / 1000 이상으로 작아지지 않는다 라는 뜻 */
+            max-width: 1920px; /* 웹 페이지의 최대값이 1920이다 / 1920 보다 커지지 않는다 라는 뜻 */
+            margin: 0px auto; /* 웹 페이지 창을 크기 조절했을 때 여백이 없고, 자동으로 변할 수 있도록 설정 */
+            /* 크롬 개발자 도구를 이용해서 내용들이 창(웹 페이지 영역)을 벗어나지 않는 최소값과 최대값을 찾아줘야 함 */
+        }
+
+        header ul{ /* header 안에 ul 을 호출 */
+            list-style: none;
+            display: flex;
+            padding: 0px;
+        }
+        header li{ /* 텍스트 하나하나에 padding 을 주려면 ul 이 아니라 li 에 값을 줘야 함 (텍스트 사이 실선도 마찬가지) */
+            padding: 0px 10px; /* 상하 좌우 로 값을 줌 */
+            border-right: solid 1px gray;
+        }
+        header li:last-child{
+            border: none; /* CONTACT US 옆에 들어간 회색 실선을 지움 */
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 50px;
+        }
+        header h1{
+            margin: 0px;
+        }
+        header img{
+            display: block;
+        }
+        header>div>img{
+            margin: 15px 0px;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+        }
+        nav li{
+            padding: 0px 10px;
+        }
+        nav {
+            display: flex; /* 남용하면 안 되고, 가로 배치해야 하는 부분에만 써야 함 */
+            justify-content: space-between;
+            background-color: lightgrey;
+            padding: 5px 50px; /* 첫 번째는 상하 여백, 두 번째는 좌우 여백 */
+        }
+        nav h2{
+            margin: 9px 0px;
+        }
+        #content>section>div{
+            display: flex;
+            justify-content: center;
+        }
+        #content dt{
+            font-weight: bold; /* 폰트 굵기를 bold로 */
+        }
+        #content dd{
+            margin: 0px;
+        }
+        .container{
+            margin: 0px 10px;
+        }
+        #content>section:nth-child(1){background-color: #98f;}
+        #content>section:nth-child(2){background-color: #5d9;}
+        #content>section:nth-child(3){background-color: #f76;}
+        #content>section:nth-child(4){background-color: #ec5;}
+        h3{
+            margin: 0px;
+            padding-bottom: 40px;
+            color: white;
+            font-weight: normal;
+        }
+        section{
+            padding: 50px;
+        }
+        footer ul{
+            list-style: none;
+            display: flex;
+            padding: 0px;
+        }
+        footer ul li{
+            padding: 0px 5px;
+        }
+        footer div:first-child li{
+            border-right: solid 1px lightgray;
+        }
+        footer div:first-child li:last-child{
+            border: none;
+        }
+        footer{
+            display: flex; /* footer 안에 두 박스를 가로 배치할 것이기 때문에 그 부모 객체인 footer 를 호출 */
+            justify-content: space-between;
+            background-color: #333;
+            color: white;
+            padding: 50px;
+        }
+
+        /* css 는 모두 head 안에 */
+        /* 문제가 없다면 셋 중 어떤 방식의 selector 로 불러도 괜찮음 */
+        /* 크롬 창 개발자 도구에서 해보면서 어떤 selector 에 값을 넣으면 좋을지 생각해봐야 한다! */
+        /* 한 번 부른 이름은 새로 부르지 말고, 그냥 그 안에 계속 써주는 게 좋음 */
+        /* 띄어쓰기는 어딘가에 있어요 라는 뜻, content dd 는 content 안 어딘가에 dd */
+    </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header>
+                <h1><img src="layout1/logo.png" /></h1> <!-- h~ 붙이는 걸 마크업 한다고 함 -> 중요도 부여-->
+                <ul>
+                    <li>ABOUT</li>
+                    <li>SERVICES</li>
+                    <li>WORK</li>
+                    <li>BLOG</li>
+                    <li>CONTACT US</li>
+                </ul>
+                <div><img src="layout1/zoom.png" /></div> <!-- div 가 없었을 때는 이미지 자체가 박스가 되어었었어서 같이 크기가 늘어나 비율이 망가졌었지만,
+                                                    div 로 박스를 만들어 주니까 이미지가 원래 크기/비율로 돌아온 거임 -->
+            </header>
+            <nav>
+                <h2>See Our Works</h2>
+                <ul>
+                    <li>web designs</li>
+                    <li>icons</li>
+                    <li>web designs</li>
+                    <li>web designs</li>
+                </ul>
+                <div></div> <!-- 레이아웃 칸을 하나 더 늘리기 위해 쓰는 가짜 div (like 텅 빈 박스)-->
+                <!-- div 는 아무 데나 들어가도 괜찮아서 이런 식의 꼼수에 써도 됨) -->
+            </nav>
+            <div id="content">
+                    <section> <!-- 제목이 있고, 주제가 있기 때문에 section 을 씀 -->
+                        <h3>Web Design</h3>
+                        <div> <!-- 아래 div 를 가로로 두 칸 배치하려면 이 줄의 div 를 selector 로 불러야 함 -->
+                            <div class="container"> <!-- 왼 칸 -->
+                                <img src="layout1/img1.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                            <div class="container"> <!-- 오른 칸 -->
+                                <img src="layout1/img2.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </section>
+                    <section> <!-- 제목이 있고, 주제가 있기 때문에 section 을 씀 -->
+                        <h3>Web Design</h3>
+                        <div> <!-- 아래 div 를 가로로 두 칸 배치하려면 이 줄의 div 를 selector 로 불러야 함 -->
+                            <div class="container"> <!-- 왼 칸 -->
+                                <img src="layout1/img3.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                            <div class="container"> <!-- 오른 칸 -->
+                                <img src="layout1/img4.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </section>
+                    <section> <!-- 제목이 있고, 주제가 있기 때문에 section 을 씀 -->
+                        <h3>Web Design</h3>
+                        <div> <!-- 아래 div 를 가로로 두 칸 배치하려면 이 줄의 div 를 selector 로 불러야 함 -->
+                            <div class="container"> <!-- 왼 칸 -->
+                                <img src="layout1/img5.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                            <div class="container"> <!-- 오른 칸 -->
+                                <img src="layout1/img6.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </section>
+                    <section> <!-- 제목이 있고, 주제가 있기 때문에 section 을 씀 -->
+                        <h3>Web Design</h3>
+                        <div> <!-- 아래 div 를 가로로 두 칸 배치하려면 이 줄의 div 를 selector 로 불러야 함 -->
+                            <div class="container"> <!-- 왼 칸 -->
+                                <img src="layout1/img7.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                            <div class="container"> <!-- 오른 칸 -->
+                                <img src="layout1/img8.png" />
+                                <dl>
+                                    <dt>프로젝트 제목</dt>
+                                    <dd>프로젝트 내용</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            <footer>
+                <div>
+                <ul>
+                    <li>home</li>
+                    <li>about</li>
+                    <li>services</li>
+                    <li>work</li>
+                    <li>blog</li>
+                    <li>contact us</li>
+                </ul>
+                <p>copyright</p>
+                <p>discription</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><img src="layout1/icon1.png" /></li>
+                        <li><img src="layout1/icon2.png" /></li>
+                        <li><img src="layout1/icon3.png" /></li>
+                        <li><img src="layout1/icon4.png" /></li>
+                        <li><img src="layout1/icon5.png" /></li>
+                        <li><img src="layout1/icon6.png" /></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>

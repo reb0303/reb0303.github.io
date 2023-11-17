@@ -1,0 +1,92 @@
+웹퍼블리싱 직무1 사용 태그 체크 리스트
+
+[텍스트 요소]
+
+- Strong *
+- em 
+- ins 
+- del (애들 사진 잔뜩 넣고 삭제글로 귀여우니까 봐주세요 쓰기)
+- sup *
+- sub *
+
+
+[문단 요소]
+
+- h1~h6 *
+- br *
+- hr *
+
+[목록 요소]
+
+- ul *
+- ol *
+- li *
+- dl 
+- dt 
+- dd 
+
+
+[테이블 요소]
+
+- table 
+- tr 
+- td 
+- th 
+- caption 
+- summary 
+- thead 
+- tfoot 
+- tbody 
+- scope 
+
+
+[그룹화 요소]
+
+- div 
+- span 
+
+
+[폼 요소]
+
+- form 
+- input 
+- select 
+- button 
+- submit 
+
+
+[HTML5 전용 태그]
+
+- section 
+- nav 
+- article 
+- aside 
+- header 
+- footer 
+
+
+[HTML5 미디어 태그]
+
+- canvas 
+- audio 
+- video 
+
+
+
+[평가 제외 항목]
+
+- 표현을 위한 html 태그 (font, center, b, u, i)
+- 표현을 위한 CSS(style)
+- 마지막에 ‘느낀 점’을 꼭 추가하세요. (수업이나 웹이나 학교에 대한 느낀 점이나 하고 싶은말)
+- http://redwriteblue.com/tags/htmlcount.html 를 이용하여 사용한 태그의 종류과 갯수 open된 tag가 없는지를 확인합니다.
+- 페이지에서 마우스 오른쪽 클릭 ‘페이지 소스 보기’ 선택
+- 소스보기에서 나온 소스코드를 전체선택(Ctrl+A) 하여 복사(Ctrl+C)
+- 위 사이트에 접속하여 붙여넣기(Ctrl+V)한 후 ‘Count Tags’ 선택
+
+
+
+[발표]
+
+- 총 발표 시간은 개인 당 5분 (나오는 시간, 홈페이지 접속시간, 들어가는 시간 모두 포함)
+- 발표 시간 이외에 별도로 개별 과제를 채점하는 시간이 없습니다. 발표 시간 동안에 최대한 중간평가 과제에 대해 설명하도록 하세요.
+- 평가 방법을 참고하여 자신의 발표 시간을 배분하세요. ‘소스보기’로 html을 리뷰해야 할 수도 있습니다.
